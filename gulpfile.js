@@ -55,7 +55,7 @@ function styles() {
     .pipe(
       cleancss({
         level: { 1: { specialComments: 0 } },
-        format: "beautify",
+        // format: "beautify",
       })
     ) // Минифицируем стили
     .pipe(sourcemaps.write(".")) // создание карты css.map в текущей папке

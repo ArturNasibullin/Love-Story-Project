@@ -9,12 +9,29 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Open Sans Regular";
+  src: url("../fonts/OpenSans-Regular.eot");
+  src: url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/OpenSans-Regular.woff") format("woff"),
+    url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "Cormorant Garamond";
   src: url("../fonts/CormorantGaramond-Regular.eot");
   src: url("../fonts/CormorantGaramond-Regular.eot?#iefix")
       format("embedded-opentype"),
     url("../fonts/CormorantGaramond-Regular.woff") format("woff"),
     url("../fonts/CormorantGaramond-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pacifico";
+  src: url("../fonts/Pacifico-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

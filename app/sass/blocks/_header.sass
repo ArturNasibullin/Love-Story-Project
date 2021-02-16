@@ -1,37 +1,82 @@
 .header
-	&__grid
-		width: 100%
-		display: grid
-		grid-template-columns: 10% 90%
-		grid-template-rows: 80px
-		align-items: center
-	&-logo
-		justify-self: start
-	&-menu
-		justify-self: end
+	&__wrap
+		position: relative
+	&-row
+		+row-flex
+		background-color: $colors__white
 		font-size: 1.6rem
-		background-color: transparent
-		display: flex
-
-		flex-flow: row wrap
-		transition: all 0.3s
-		@include _768
-			position: fixed
-			right: 70px
-			flex-flow: column wrap
-			visibility: hidden
-			right: -200px
+		text-transform: uppercase
+		align-items: center
+		min-height: 140px
+		position: absolute
+		width: 100%
+		&.fixed
 			z-index: 999
-		&.active
-			background-color: $colors__light-gray
-			color: $colors__base
-			width: 200px
-			right: 0
-			visibility: visible
-		&__link
-			padding: 32px 24px
-			transition: background-color 0.3s
-			&:hover
-				background-color: $colors__primary
+			width: 100%
+			position: fixed
+	&-logo
+		+size(2)
+		+size-md(3)
+		text-align: center
+		vertical-align: middle
+	&-menu
+		+size(7)
+		display: flex
+		flex-flow: row wrap
+		justify-content: flex-end
+		transition: all 0.5s
+		@include _768
+			display: none
+		&__item
+			margin-right: 30px
 			@include _768
-				padding: 20px
+				margin-bottom: 10px
+				padding: 10px 20px 0 0
+				font-size: 2.2rem
+				width: 100%
+				text-align: right
+		&__link
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				width: 0
+				height: 1px
+				top: 100%
+				background: #000000
+				left: 0px
+				right: 0
+				transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+			&:hover
+				&::before
+					width: 100%
+					right: 0px
+	&-add
+		display: flex
+		flex-flow: row wrap
+		justify-content: flex-end
+		+size(3)
+		+size-md(9)
+		+size-sm(8)
+		&__search
+			margin-right: 30px
+.header-mobile-menu
+	opacity: 0
+	display: flex
+	flex-direction: column
+	justify-content: center
+	position: absolute
+	top: 0
+	left: 0
+	background-color: $colors__white
+	height: 0
+	width: 100vw
+	text-align: center
+	font-size: 2rem
+	transition: all 0.4s
+	&__link
+		padding: 15px 0
+		text-transform: uppercase
+	&.active
+		opacity: 1
+		height: 100vh

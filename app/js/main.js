@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Кнопка menu
   let btn = document.querySelector(".header__nav-btn");
-  let menu = document.querySelector(".header-menu");
+  let menu = document.querySelector(".header-mobile-menu");
   let menuItem = document.querySelectorAll(".header-menu__link");
 
   btn.addEventListener("click", () => {
