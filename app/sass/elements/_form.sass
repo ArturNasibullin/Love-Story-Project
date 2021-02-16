@@ -1,0 +1,27 @@
+.form
+	&__label
+		width: 100%
+		font-size: 16px
+		line-height: 150%
+		@include _768
+			margin-left: 10px
+
+	&__input
+		width: 100%
+		margin-bottom: 40px
+		margin-top: 10px
+		padding: 10px
+		height: 50px
+		background-color: $colors__level1
+		border: none
+		color: $colors__text
+		font-size: 1.8rem
+		&:focus
+			outline: 1px solid $colors__primary
+		@include _768
+			display: block
+			margin: 10px auto 40px
+			width: 97%
+	&__textarea
+		height: 100px
+		resize: none
