@@ -10,25 +10,29 @@
 			letter-spacing: 0.15em
 			margin: 0 20px
 			cursor: pointer
+			background-color: transparent
+			border: none
+			outline: none
+			border-bottom: 1px solid transparent
+			transition: all 0.3s
 			&.active
-				color: #212122
+				color: $colors__text
 				border-bottom: 1px solid $colors__text
 	&-tabs
 		&-content
 			display: flex
 			flex-flow: row wrap
-			justify-content: space-between
 			align-items: center
 			@include _768
 				justify-content: center
-
 		&-item
-			display: flex
+			display: none
 			flex-flow: column nowrap
 			width: 20%
 			margin: 0 10px 30px
 			height: 395px
-			background-color: $colors__white
+			&.active
+				display: flex
 			@include _979
 				height: 340px
 			@include _768

@@ -478,7 +478,7 @@ body {
   margin-left: -15px;
   margin-right: -15px;
   background-color: #ffffff;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -655,7 +655,6 @@ body {
 }
 
 .hero {
-  background: url(../img/body-bg.svg);
   background-position: center center;
   background-size: contain;
   background-repeat: repeat-y;
@@ -835,6 +834,12 @@ body {
   letter-spacing: 0.15em;
   margin: 0 20px;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .tranding-nav-tab.active {
@@ -850,9 +855,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -867,9 +869,7 @@ body {
 }
 
 .tranding-tabs-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -877,7 +877,12 @@ body {
   width: 20%;
   margin: 0 10px 30px;
   height: 395px;
-  background-color: #ffffff;
+}
+
+.tranding-tabs-item.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media only screen and (max-width: 979px) {
@@ -1002,5 +1007,108 @@ body {
   color: #212122;
   border: 1px solid #747474;
   background-color: #FFF;
+}
+
+.promo__wrap {
+  background: url(../img/promo.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.promo-row {
+  height: 250px;
+  margin-bottom: 50px;
+}
+
+.promo-text {
+  text-align: center;
+  padding: 50px 28%;
+}
+
+@media only screen and (max-width: 480px) {
+  .promo-text {
+    padding: 50px 30px;
+  }
+}
+
+.promo-text__title {
+  font-size: 2.8rem;
+  line-height: 39px;
+  letter-spacing: 0.1em;
+  margin-bottom: 15px;
+}
+
+.promo-text__subtitle {
+  color: #b77e74;
+  letter-spacing: 0.1em;
+  font-size: 1.4rem;
+}
+
+.footer-logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+.footer-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 70px;
+}
+
+.footer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.footer-menu__item {
+  margin-right: 60px;
+}
+
+.footer-menu__link {
+  display: inline-block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-right: 60px;
+  color: #000000;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  border-right: 1px solid #00000071;
+  opacity: 0.7;
+}
+
+.footer-socials {
+  font-size: 1.8rem;
+  opacity: 0.7;
+}
+
+.footer-socials__item {
+  margin-right: 20px;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-socials__item:hover {
+  color: #cf998f;
 }
 /*# sourceMappingURL=style.css.map */

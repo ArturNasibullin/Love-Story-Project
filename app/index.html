@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="fonts/style.css" />
 </head>
 
-<body>
+<body class="body">
 	<header class="header">
 		<div class="container">
 			<div class="header__wrap">
@@ -60,10 +60,9 @@
 				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link" href="#">Магазин</a></li>
 				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link" href="#">Контакты</a></li>
 				<li class="header-mobile-menu__item header-mobile-menu-socials">
-					<a class="header-mobile-menu-socials__link" href="#"><i class="icon-cart"></i></a>
-					<a class="header-mobile-menu-socials__link" href="#"><i class="icon-cart"></i></a>
-					<a class="header-mobile-menu-socials__link" href="#"><i class="icon-cart"></i></a>
-					<a class="header-mobile-menu-socials__link" href="#"><i class="icon-cart"></i></a>
+					<a class="header-mobile-menu-socials__link" href="#"><i class="icon-instagram"></i></a>
+					<a class="header-mobile-menu-socials__link" href="#"><i class="icon-whatsapp"></i></a>
+					<a class="header-mobile-menu-socials__link" href="#"><i class="icon-telegram"></i></a>
 				</li>
 			</ul>
 		</div>
@@ -72,8 +71,8 @@
 	<main class="hero">
 		<div class="container">
 			<div class="hero-slider">
-				<div class="hero-slider__item">
-					<div class="hero-slider__text " data-aos="" data-id="super-duper">
+				<div class="hero-slider__item ">
+					<div class="hero-slider__text">
 						<p class="hero-slider__subtitle pacifico">Скидка 40%</p>
 						<h2 class="hero-slider__title">Горячая новинка</h2>
 						<button class="btn btn--hero">Купить!</button>
@@ -81,7 +80,7 @@
 					<img src="img/hero/slide-1.png" alt="" class="hero-slider__img">
 				</div>
 				<div class="hero-slider__item">
-					<div class="hero-slider__text one" data-aos="" data-aos-once="false" data-aos-anchor-placement="center right">
+					<div class="hero-slider__text one">
 						<p class="hero-slider__subtitle pacifico">Скидка 40%</p>
 						<h2 class="hero-slider__title">Горячая новинка</h2>
 						<button class="btn btn--hero">Купить!</button>
@@ -89,7 +88,7 @@
 					<img src="img/hero/slide-2.png" alt="" class="hero-slider__img">
 				</div>
 				<div class="hero-slider__item">
-					<div class="hero-slider__text" data-aos="" data-aos-once="false" data-aos-anchor-placement="center right">
+					<div class="hero-slider__text">
 						<p class="hero-slider__subtitle pacifico">Скидка 40%</p>
 						<h2 class="hero-slider__title">Горячая новинка</h2>
 						<button class="btn btn--hero">Купить!</button>
@@ -141,13 +140,13 @@
 				<div class="section-header__separator"></div>
 			</div>
 			<div class="tranding-nav-tabs">
-				<a href="#" data-tab="1" class="tranding-nav-tab active">Одежда</a>
-				<a href="#" data-tab="2" class="tranding-nav-tab">Обувь</a>
-				<a href="#" data-tab="3" class="tranding-nav-tab">Аксессуары</a>
-				<a href="#" data-tab="4" class="tranding-nav-tab">Сумки</a>
+				<button data-tab="1" class="tranding-nav-tab active">Одежда</button>
+				<button data-tab="2" class="tranding-nav-tab">Обувь</button>
+				<button data-tab="3" class="tranding-nav-tab">Аксессуары</button>
+				<button data-tab="4" class="tranding-nav-tab">Сумки</button>
 			</div>
 			<div class="tranding-tabs-content">
-				<div data-tab-content="1" class="tranding-tabs-item active">
+				<div data-index="1" class="tranding-tabs-item active">
 					<a href="#" class="tranding-tabs-item__link">
 						<img src="img/products/item-1.jpg" alt="" class="tranding-tabs-item__img">
 						<div class="tranding-tabs-item__border-one"></div>
@@ -161,7 +160,91 @@
 					</a>
 					<span class="tranding-tabs-item__price">2500 p.</span>
 				</div>
-				<div data-tab-content="2" class="tranding-tabs-item">
+				<div data-index="1" class="tranding-tabs-item active">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-1.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Куртка женская серая</h2>
+					</a>
+					<span class="tranding-tabs-item__price">2500 p.</span>
+				</div>
+				<div data-index="1" class="tranding-tabs-item active">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-1.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Куртка женская серая</h2>
+					</a>
+					<span class="tranding-tabs-item__price">2500 p.</span>
+				</div>
+				<div data-index="1" class="tranding-tabs-item active">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-1.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Куртка женская серая</h2>
+					</a>
+					<span class="tranding-tabs-item__price">2500 p.</span>
+				</div>
+				<div data-index="1" class="tranding-tabs-item active">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-1.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Куртка женская серая</h2>
+					</a>
+					<span class="tranding-tabs-item__price">2500 p.</span>
+				</div>
+				<div data-index="1" class="tranding-tabs-item active">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-1.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Куртка женская серая</h2>
+					</a>
+					<span class="tranding-tabs-item__price">2500 p.</span>
+				</div>
+				<div data-index="1" class="tranding-tabs-item active">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-1.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Куртка женская серая</h2>
+					</a>
+					<span class="tranding-tabs-item__price">2500 p.</span>
+				</div>
+				<div data-index="2" class="tranding-tabs-item">
 					<a href="#" class="tranding-tabs-item__link">
 						<img src="img/products/item-2.jpg" alt="" class="tranding-tabs-item__img">
 						<div class="tranding-tabs-item__border-one"></div>
@@ -175,7 +258,7 @@
 					</a>
 					<span class="tranding-tabs-item__price">3500 p.</span>
 				</div>
-				<div data-tab-content="3" class="tranding-tabs-item">
+				<div data-index="2" class="tranding-tabs-item">
 					<a href="#" class="tranding-tabs-item__link">
 						<img src="img/products/item-3.jpg" alt="" class="tranding-tabs-item__img">
 						<div class="tranding-tabs-item__border-one"></div>
@@ -189,7 +272,7 @@
 					</a>
 					<span class="tranding-tabs-item__price">2500 p.</span>
 				</div>
-				<div data-tab-content="4" class="tranding-tabs-item">
+				<div data-index="3" class="tranding-tabs-item">
 					<a href="#" class="tranding-tabs-item__link">
 						<img src="img/products/item-4.jpg" alt="" class="tranding-tabs-item__img">
 						<div class="tranding-tabs-item__border-one"></div>
@@ -203,7 +286,7 @@
 					</a>
 					<span class="tranding-tabs-item__price">500 p.</span>
 				</div>
-				<div data-tab-content="1" class="tranding-tabs-item">
+				<div data-index="1" class="tranding-tabs-item active">
 					<a href="#" class="tranding-tabs-item__link">
 						<img src="img/products/item-5.jpg" alt="" class="tranding-tabs-item__img">
 						<div class="tranding-tabs-item__border-one"></div>
@@ -217,7 +300,7 @@
 					</a>
 					<span class="tranding-tabs-item__price">6500 p.</span>
 				</div>
-				<div data-tab-content="2" class="tranding-tabs-item">
+				<div data-index="4" class="tranding-tabs-item">
 					<a href="#" class="tranding-tabs-item__link">
 						<img src="img/products/item-6.jpg" alt="" class="tranding-tabs-item__img">
 						<div class="tranding-tabs-item__border-one"></div>
@@ -231,7 +314,7 @@
 					</a>
 					<span class="tranding-tabs-item__price">1800 p.</span>
 				</div>
-				<div data-tab-content="3" class="tranding-tabs-item">
+				<div data-index="2" class="tranding-tabs-item">
 					<a href="#" class="tranding-tabs-item__link">
 						<img src="img/products/item-2.jpg" alt="" class="tranding-tabs-item__img">
 						<div class="tranding-tabs-item__border-one"></div>
@@ -245,7 +328,7 @@
 					</a>
 					<span class="tranding-tabs-item__price">2500 p.</span>
 				</div>
-				<div data-tab-content="4" class="tranding-tabs-item">
+				<div data-index="2" class="tranding-tabs-item">
 					<a href="#" class="tranding-tabs-item__link">
 						<img src="img/products/item-4.jpg" alt="" class="tranding-tabs-item__img">
 						<div class="tranding-tabs-item__border-one"></div>
@@ -263,11 +346,41 @@
 		</div>
 	</section>
 
-	<footer class="footer">
+	<section class="promo ">
+		<div class="promo__wrap">
+			<div class="container">
+				<div class="promo-row">
+					<div class="promo-text text">
+						<p class="promo-text__title">Распродажи каждую неделю</p>
+						<p class="promo-text__subtitle">Скидки до 60% на самые популярные товары</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer class=" footer">
 		<div class="container">
+			<div class="footer__wrap">
+				<div class="footer-logo"><img src="img/logo.jpg" alt="" class="footer-logo__img"></div>
+				<div class="footer-navigation">
+					<ul class="footer-menu">
+						<li class="footer-menu__item"> <a href="#" class="footer-menu__link">Главная</a></li>
+						<li class="footer-menu__item"> <a href="#" class="footer-menu__link">О нас</a></li>
+						<li class="footer-menu__item"> <a href="#" class="footer-menu__link">Блог</a></li>
+						<li class="footer-menu__item"> <a href="#" class="footer-menu__link">Магазин</a></li>
+						<li class="footer-menu__item"> <a href="#" class="footer-menu__link">Контакты</a></li>
+					</ul>
+					<div class="footer-socials">
+						<a href="#" class="footer-socials__item"><i class="icon-instagram"></i></a>
+						<a href="#" class="footer-socials__item"> <i class="icon-whatsapp"></i></a>
+						<a href="#" class="footer-socials__item"><i class="icon-telegram"></i></a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</footer>
-
 
 	<!--Modal-->
 	<div class="modal" style="display: none;">
@@ -275,7 +388,8 @@
 			<div class="modal__wrapper">
 				<a class="modal__close" href="#">&times;</a>
 				<h2 class="modal__title">Subscribe</h2>
-				<p class="modal__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				<p class="modal__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+				</p>
 				<form class="modal-form form" action="mail.php" method="POST">
 					<div class="modal-form__wrap">
 						<input class="form__input modal__input" required type="text" name="user_name" id="user_name"
@@ -318,9 +432,11 @@
 		</symbol>
 	</svg>
 
+	<script src="js/libs/jquery.min.js"></script>
 	<script src="js/main.js"></script>
-	<!-- <script src="js/libs/flickity.pkgd.js"></script> -->
 	<script src="js/libs/flickity.pkgd.min.js"></script>
+	<script src="js/libs/parallaxie.js"></script>
+
 	<script src="js/libs/aos.js"></script>
 </body>
 

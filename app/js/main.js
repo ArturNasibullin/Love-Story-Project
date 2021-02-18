@@ -10,6 +10,42 @@ window.addEventListener("DOMContentLoaded", () => {
     pageDots: false,
   });
 
+  // Tranding tabs
+  let tab = function () {
+    const tabNav = document.querySelectorAll(".tranding-nav-tab"),
+      tabContent = document.querySelectorAll(".tranding-tabs-item");
+
+    tabNav.forEach((item) => {
+      item.addEventListener("click", selectTabNav);
+    });
+
+    function selectTabNav() {
+      tabNav.forEach((item) => {
+        item.classList.remove("active");
+      });
+      this.classList.add("active");
+      tabNavIndex = this.dataset.tab;
+      selectTabContent(tabNavIndex);
+    }
+
+    function selectTabContent(tabNavIndex) {
+      tabContent.forEach((item) => {
+        item.dataset.index == tabNavIndex
+          ? item.classList.add("active")
+          : item.classList.remove("active");
+      });
+    }
+  };
+  tab();
+  $(".body").parallaxie({
+    speed: -0.4,
+    offset: 70,
+    size: "cover",
+    repeat: "repeat",
+  });
+  $(".promo__wrap").parallaxie({
+    size: "contain",
+  });
   //Smooth Scroll
 
   function scrollTo() {
