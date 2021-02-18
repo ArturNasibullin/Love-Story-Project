@@ -15,3 +15,54 @@ body
 	+wrapper
 .pacifico
 	font-family: "Pacifico"
+.section-header
+	padding: 5em 0 3em
+	text-align: center
+	&__title
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		margin-bottom: 20px
+	&__separator
+		width: 47px
+		height: 34px
+		background-image: url(../img/separator.png)
+		display: block
+		margin: 0 auto
+		position: relative
+		&::before
+			content: ""
+			display: block
+			width: 40px
+			height: 1px
+			background: #dadada
+			margin-right: 10px
+			position: absolute
+			right: 100%
+			top: 50%
+		&::after
+			content: ""
+			display: block
+			width: 40px
+			height: 1px
+			background: #dadada
+			margin-left: 10px
+			position: absolute
+			left: 100%
+			top: 50%
+
+.flickity-prev-next-button.previous
+	left: -30px
+.flickity-prev-next-button.next
+	right: -30px
+.flickity-button
+	transition: all 0.3s
+	background-color: transparent
+	@include _768
+		display: none
+	&:hover
+		background-color: transparent
+.flickity-button-icon
+	transition: all 0.3s
+	fill: $colors__primary
+	&:hover
+		fill: $colors__base

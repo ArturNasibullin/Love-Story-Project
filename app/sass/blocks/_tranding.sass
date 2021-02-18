@@ -1,0 +1,113 @@
+.tranding
+	&-nav
+		&-tabs
+			display: flex
+			justify-content: center
+			margin: 0 0 35px 0
+		&-tab
+			color: $colors__dark-gray
+			font-size: 1.5rem
+			letter-spacing: 0.15em
+			margin: 0 20px
+			cursor: pointer
+			&.active
+				color: #212122
+				border-bottom: 1px solid $colors__text
+	&-tabs
+		&-content
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+			align-items: center
+			@include _768
+				justify-content: center
+
+		&-item
+			display: flex
+			flex-flow: column nowrap
+			width: 20%
+			margin: 0 10px 30px
+			height: 395px
+			background-color: $colors__white
+			@include _979
+				height: 340px
+			@include _768
+				width: 30%
+			@include _480
+				width: 50%
+			&__link
+				position: relative
+				height: 300px
+				@include _979
+					height: 250px
+				@include _768
+					height: 300px
+				&:hover
+					.tranding-tabs-item__border-one
+						opacity: 1
+						transition: all 300ms ease-in-out
+						margin-top: -7px
+						margin-left: -7px
+						width: calc(100% + 7px)
+						height: calc(100% + 7px)
+					.tranding-tabs-item__border-two
+						opacity: 1
+						transition: all 300ms ease-in-out
+						margin-bottom: -7px
+						margin-right: -7px
+						width: calc(100% + 7px)
+						height: calc(100% + 7px)
+					.tranding-tabs-item__quickview
+						margin-bottom: 30px
+						opacity: 1
+						transition: all 300ms ease-in-out
+			&__img
+			&__title
+				color: $colors__text
+				margin: 20px 0 10px
+				font-size: 1.6rem
+				letter-spacing: 0.05em
+				max-height: 45px
+				overflow-y: hidden
+				line-height: 1.5
+				// text-transform: uppercase
+				cursor: pointer
+			&__price
+				color: $colors__dark-gray
+				font-size: 1.4rem
+				line-height: 22px
+			&__border
+				&-one, &-two
+					border: 1px solid $colors__border
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					opacity: 0
+					transition: all 300ms ease-in-out
+			&__quickview
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				width: 100%
+				text-align: center
+				opacity: 0
+				transition: all 300ms ease-in-out
+				span
+					height: 3.6rem
+					line-height: 3.6rem
+					text-transform: uppercase
+					color: #FFF
+					background-color: #212122
+					display: inline-block
+					padding: 0 35px
+					margin: 0 auto
+					letter-spacing: 0.2em
+					border: 1px solid transparent
+					transition: all 300ms ease-in-out
+					&:hover
+						color: #212122
+						border: 1px solid #747474
+						background-color: #FFF

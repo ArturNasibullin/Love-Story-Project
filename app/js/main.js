@@ -1,4 +1,15 @@
 window.addEventListener("DOMContentLoaded", () => {
+  var elem = document.querySelector(".hero-slider");
+
+  var flkty = new Flickity(elem, {
+    // options
+    cellAlign: "right",
+    wrapAround: true,
+    selectedAttrыaction: 0.015,
+    friction: 0.5,
+    pageDots: false,
+  });
+
   //Smooth Scroll
 
   function scrollTo() {
@@ -53,31 +64,31 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  let animatedItem = document.querySelectorAll(".animate__animated");
-  animatedItem.forEach((item) => {
-    item.style.opacity = 0;
-    let effect = item.dataset.effect;
-    var waypoint = new Waypoint({
-      element: item,
-      handler: function (direction) {
-        if (effect === "fadeInUp") {
-          item.classList.add("animate__fadeInUp");
-        } else if (effect === "fadeInLeft") {
-          item.classList.add("animate__fadeInLeft");
-        } else if (effect === "fadeInRight") {
-          item.classList.add("animate__fadeInRight");
-        } else if (effect === "flipInX") {
-          item.classList.add("animate__flipInX");
-          item.style.opacity = 1;
-        } else if (effect === "zoomIn") {
-          item.classList.add("animate__zoomIn");
-          item.style.opacity = 1;
-        } else if (effect === "pulse") {
-          item.classList.add("animate__pulse");
-          item.style.opacity = 1;
-        }
-      },
-      offset: "75%",
-    });
-  });
+  // let animatedItem = document.querySelectorAll(".animate__animated");
+  // animatedItem.forEach((item) => {
+  //   item.style.opacity = 0;
+  //   let effect = item.dataset.effect;
+  //   var waypoint = new Waypoint({
+  //     element: item,
+  //     handler: function (direction) {
+  //       if (effect === "fadeInUp") {
+  //         item.classList.add("animate__fadeInUp");
+  //       } else if (effect === "fadeInLeft") {
+  //         item.classList.add("animate__fadeInLeft");
+  //       } else if (effect === "fadeInRight") {
+  //         item.classList.add("animate__fadeInRight");
+  //       } else if (effect === "flipInX") {
+  //         item.classList.add("animate__flipInX");
+  //         item.style.opacity = 1;
+  //       } else if (effect === "zoomIn") {
+  //         item.classList.add("animate__zoomIn");
+  //         item.style.opacity = 1;
+  //       } else if (effect === "pulse") {
+  //         item.classList.add("animate__pulse");
+  //         item.style.opacity = 1;
+  //       }
+  //     },
+  //     offset: "75%",
+  //   });
+  // });
 });

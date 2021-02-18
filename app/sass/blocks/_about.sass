@@ -1,0 +1,46 @@
+.about
+	&-row
+		display: flex
+		flex-flow: row wrap
+		align-items: center
+		justify-content: center
+		margin: 60px 0
+	&-item
+		+size-md(12)
+		min-height: 100px
+		min-width: 300px
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		margin-right: 20px
+		background-color: $colors__primary
+		background: url(../img/about/bg_promo1.png)
+		@include _768
+			margin-bottom: 20px
+		@include _480
+			margin-right: 0
+		&__icon
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 3rem
+			color: $colors__base
+			opacity: 0.7
+			width: 70px
+			height: 70px
+			border-radius: 50%
+			background: rgba(253, 253, 253, 0.7)
+			@include _480
+				font-size: 3.5rem
+
+		&__text
+			margin-left: 30px
+			@include _480
+				margin-left: 15px
+		&__title
+			font-size: 2rem
+			text-transform: uppercase
+			letter-spacing: 0.15em
+		&__subtitle
+			font-size: 1.4rem
+			color: $colors__dark-gray

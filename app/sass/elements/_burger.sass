@@ -6,9 +6,10 @@
 .burger
 	display: flex
 	align-items: center
-	position: fixed
-	right: 45px
 	display: none
+	position: fixed
+	top: 20px
+	right: 25px
 	width: 50px
 	height: 50px
 	background-color: transparent
@@ -43,6 +44,8 @@
 		&::after
 			transform: translateY(10px)
 	&.active
+		z-index: 9999
+
 		& span
 			height: 0
 			&::before

@@ -10,8 +10,13 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 
+	<!-- Flickity slider -->
+	<link rel="stylesheet" href="css/libs/flickity.css" media="screen">
+	<!-- AOS -->
+	<link href="css/libs/aos.css" rel="stylesheet">
 	<!-- Add styles -->
 	<link rel="stylesheet" href="css/style.css" />
+	<!-- IcoMoon -->
 	<link rel="stylesheet" href="fonts/style.css" />
 </head>
 
@@ -23,9 +28,6 @@
 					<div class="header-logo">
 						<a href="#"><img src="img/logo.jpg" alt="Лого сайта"></a>
 					</div>
-					<button class="burger header__nav-btn">
-						<span class="burger__span"></span>
-					</button>
 					<ul class="header-menu">
 						<li class="header-menu__item"><a class="header-menu__link" href="#">Главная</a></li>
 						<li class="header-menu__item"><a class="header-menu__link" href="#">О нас</a></li>
@@ -48,12 +50,21 @@
 			</div>
 		</div>
 		<div class="mobile-menu">
+			<button class="burger header__nav-btn">
+				<span class="burger__span"></span>
+			</button>
 			<ul class="header-mobile-menu">
 				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link" href="#">Главная</a></li>
 				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link" href="#">О нас</a></li>
 				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link" href="#">Блог</a></li>
 				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link" href="#">Магазин</a></li>
 				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link" href="#">Контакты</a></li>
+				<li class="header-mobile-menu__item header-mobile-menu-socials">
+					<a class="header-mobile-menu-socials__link" href="#"><i class="icon-cart"></i></a>
+					<a class="header-mobile-menu-socials__link" href="#"><i class="icon-cart"></i></a>
+					<a class="header-mobile-menu-socials__link" href="#"><i class="icon-cart"></i></a>
+					<a class="header-mobile-menu-socials__link" href="#"><i class="icon-cart"></i></a>
+				</li>
 			</ul>
 		</div>
 	</header>
@@ -62,32 +73,195 @@
 		<div class="container">
 			<div class="hero-slider">
 				<div class="hero-slider__item">
-					<h1 class="hero-slider__title">Горячая новинка сезона</h1>
-					<p class="hero-slider__subtitle pacifico">Скидка 40%</p>
-					<button class="btn btn--hero">Купить!</button>
+					<div class="hero-slider__text " data-aos="" data-id="super-duper">
+						<p class="hero-slider__subtitle pacifico">Скидка 40%</p>
+						<h2 class="hero-slider__title">Горячая новинка</h2>
+						<button class="btn btn--hero">Купить!</button>
+					</div>
 					<img src="img/hero/slide-1.png" alt="" class="hero-slider__img">
 				</div>
 				<div class="hero-slider__item">
-					<h1 class="hero-slider__title">Горячая новинка сезона</h1>
-					<div class="hero-slider__subtitle pacifico">Скидка 40%</div>
-					<button class="btn btn--hero">Купить!</button>
+					<div class="hero-slider__text one" data-aos="" data-aos-once="false" data-aos-anchor-placement="center right">
+						<p class="hero-slider__subtitle pacifico">Скидка 40%</p>
+						<h2 class="hero-slider__title">Горячая новинка</h2>
+						<button class="btn btn--hero">Купить!</button>
+					</div>
 					<img src="img/hero/slide-2.png" alt="" class="hero-slider__img">
 				</div>
 				<div class="hero-slider__item">
-					<h1 class="hero-slider__title">Горячая новинка сезона</h1>
-					<div class="hero-slider__subtitle pacifico">Скидка 40%</div>
-					<button class="btn btn--hero">Купить!</button>
+					<div class="hero-slider__text" data-aos="" data-aos-once="false" data-aos-anchor-placement="center right">
+						<p class="hero-slider__subtitle pacifico">Скидка 40%</p>
+						<h2 class="hero-slider__title">Горячая новинка</h2>
+						<button class="btn btn--hero">Купить!</button>
+					</div>
 					<img src="img/hero/slide-3.png" alt="" class="hero-slider__img">
 				</div>
 			</div>
 		</div>
 	</main>
 
-	<section class="" id="">
-
+	<section class="about" id="about">
+		<div class="container">
+			<div class="about-row">
+				<div class="about-item">
+					<p class="about-item__icon">
+						<i class="icon-automobile"></i>
+					</p>
+					<div class="about-item__text">
+						<h3 class="about-item__title">Быстрая доставка</h3>
+						<p class="about-item__subtitle">По всей России</p>
+					</div>
+				</div>
+				<div class="about-item">
+					<p class="about-item__icon">
+						<i class="icon-dollar"></i>
+					</p>
+					<div class="about-item__text">
+						<h3 class="about-item__title">Возврат денег</h3>
+						<p class="about-item__subtitle">В течение 14 дней</p>
+					</div>
+				</div>
+				<div class="about-item">
+					<p class="about-item__icon">
+						<i class="icon-lock"></i>
+					</p>
+					<div class="about-item__text">
+						<h3 class="about-item__title">Безопасные платежи</h3>
+						<p class="about-item__subtitle">На различных платформах</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
-
+	<section class="tranding">
+		<div class="container">
+			<div class="section-header">
+				<h2 class="section-header__title">Популярные товары</h2>
+				<div class="section-header__separator"></div>
+			</div>
+			<div class="tranding-nav-tabs">
+				<a href="#" data-tab="1" class="tranding-nav-tab active">Одежда</a>
+				<a href="#" data-tab="2" class="tranding-nav-tab">Обувь</a>
+				<a href="#" data-tab="3" class="tranding-nav-tab">Аксессуары</a>
+				<a href="#" data-tab="4" class="tranding-nav-tab">Сумки</a>
+			</div>
+			<div class="tranding-tabs-content">
+				<div data-tab-content="1" class="tranding-tabs-item active">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-1.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Куртка женская серая</h2>
+					</a>
+					<span class="tranding-tabs-item__price">2500 p.</span>
+				</div>
+				<div data-tab-content="2" class="tranding-tabs-item">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-2.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Ботинки черные</h2>
+					</a>
+					<span class="tranding-tabs-item__price">3500 p.</span>
+				</div>
+				<div data-tab-content="3" class="tranding-tabs-item">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-3.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Ботинки черные</h2>
+					</a>
+					<span class="tranding-tabs-item__price">2500 p.</span>
+				</div>
+				<div data-tab-content="4" class="tranding-tabs-item">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-4.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Ремень</h2>
+					</a>
+					<span class="tranding-tabs-item__price">500 p.</span>
+				</div>
+				<div data-tab-content="1" class="tranding-tabs-item">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-5.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Пальто коричнево</h2>
+					</a>
+					<span class="tranding-tabs-item__price">6500 p.</span>
+				</div>
+				<div data-tab-content="2" class="tranding-tabs-item">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-6.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Сумка</h2>
+					</a>
+					<span class="tranding-tabs-item__price">1800 p.</span>
+				</div>
+				<div data-tab-content="3" class="tranding-tabs-item">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-2.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Ботинки черные</h2>
+					</a>
+					<span class="tranding-tabs-item__price">2500 p.</span>
+				</div>
+				<div data-tab-content="4" class="tranding-tabs-item">
+					<a href="#" class="tranding-tabs-item__link">
+						<img src="img/products/item-4.jpg" alt="" class="tranding-tabs-item__img">
+						<div class="tranding-tabs-item__border-one"></div>
+						<div class="tranding-tabs-item__border-two"></div>
+						<div class="tranding-tabs-item__quickview">
+							<span class="">Смотреть</span>
+						</div>
+					</a>
+					<a href="#">
+						<h2 class="tranding-tabs-item__title">Ботинки черные</h2>
+					</a>
+					<span class="tranding-tabs-item__price">2500 p.</span>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<footer class="footer">
 		<div class="container">
@@ -145,6 +319,9 @@
 	</svg>
 
 	<script src="js/main.js"></script>
+	<!-- <script src="js/libs/flickity.pkgd.js"></script> -->
+	<script src="js/libs/flickity.pkgd.min.js"></script>
+	<script src="js/libs/aos.js"></script>
 </body>
 
 </html>

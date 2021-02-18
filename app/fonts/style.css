@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icomoon";
-  src: url("icons/icomoon.eot?qfqz9f");
-  src: url("icons/icomoon.eot?qfqz9f#iefix") format("embedded-opentype"),
-    url("icons/icomoon.ttf?qfqz9f") format("truetype"),
-    url("icons/icomoon.woff?qfqz9f") format("woff"),
-    url("icons/icomoon.svg?qfqz9f#icomoon") format("svg");
+  src: url("icons/icomoon.eot?d3429d");
+  src: url("icons/icomoon.eot?d3429d#iefix") format("embedded-opentype"),
+    url("icons/icomoon.ttf?d3429d") format("truetype"),
+    url("icons/icomoon.woff?d3429d") format("woff"),
+    url("icons/icomoon.svg?d3429d#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,6 +26,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-lock:before {
+  content: "\e902";
+}
+.icon-dollar:before {
+  content: "\e900";
+}
+.icon-usd:before {
+  content: "\e900";
+}
+.icon-automobile:before {
+  content: "\e901";
+}
+.icon-car:before {
+  content: "\e901";
+}
 .icon-cart:before {
   content: "\e93a";
 }
