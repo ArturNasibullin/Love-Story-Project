@@ -3,7 +3,6 @@
 	background-size: contain
 	background-repeat: repeat-y
 	&-slider
-		padding-top: 100px
 		&__text
 			text-align: center
 			padding: 0 60px
@@ -20,6 +19,8 @@
 			font-size: 3rem
 		&__img
 			height: 60rem
+			@include _768
+				height: 40rem
 		&__item
 			width: 100%
 			display: flex
@@ -27,5 +28,5 @@
 			align-items: center
 			justify-content: space-between
 			margin-right: 100px
-			@include _480
+			@include _768
 				flex-direction: column-reverse

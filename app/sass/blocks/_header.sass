@@ -2,30 +2,33 @@
 	&__wrap
 		position: relative
 		z-index: 100
-	&-row
-		+row-flex
+	&-grid
 		background-color: $colors__white
 		font-size: 1.4rem
 		text-transform: uppercase
 		align-items: center
 		min-height: 100px
-		position: absolute
 		width: 100%
+		max-width: 1165px
+		padding-left: 20px
+		display: grid
+		grid-template-columns: 1fr 8fr 3fr
+		@include _1170
+			max-width: 979px
+		@include _768
+			max-width: 710px
+		@include _480
+			grid-template-columns: 20% 60% 20%
 		&.fixed
-			z-index: 999
-			width: 100%
 			position: fixed
 	&-logo
-		+size(2)
-		+size-md(3)
 		text-align: center
 		vertical-align: middle
 	&-menu
-		+size(7)
 		display: flex
 		flex-flow: row wrap
 		justify-content: flex-end
-		transition: all 0.5s
+		transition: all 0.3s
 		@include _768
 			display: none
 		&__item
@@ -56,21 +59,20 @@
 		display: flex
 		flex-flow: row wrap
 		justify-content: flex-end
-		+size(3)
-		+size-md(9)
-		+size-sm(8)
+		@include _480
+			justify-content: space-evenly
+			font-size: 3rem
+			span
+				display: none
 		&__search
 			margin-right: 30px
-			@include _480
-				margin-right: 10px
-				margin-left: 5px
 
 .header-mobile-menu
 	opacity: 0
 	display: flex
 	flex-direction: column
 	justify-content: center
-	position: absolute
+	position: fixed
 	top: -400px
 	left: 0
 	background-color: $colors__white
@@ -78,7 +80,7 @@
 	width: 100vw
 	text-align: center
 	font-size: 2rem
-	transition: all 0.4s
+	transition: all 0.5s
 	&__link
 		padding: 15px 0
 		text-transform: uppercase
@@ -88,6 +90,7 @@
 		justify-content: space-evenly
 		align-items: center
 		margin: 10px 0
+		font-size: 4rem
 	&.active
 		z-index: 100
 		top: 0

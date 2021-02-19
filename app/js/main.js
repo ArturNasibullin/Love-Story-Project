@@ -1,11 +1,11 @@
 window.addEventListener("DOMContentLoaded", () => {
   var elem = document.querySelector(".hero-slider");
+  // var trandingSlider = document.querySelector(".tranding-tabs-content");
 
   var flkty = new Flickity(elem, {
     // options
     cellAlign: "right",
     wrapAround: true,
-    selectedAttrыaction: 0.015,
     friction: 0.5,
     pageDots: false,
   });
@@ -46,6 +46,47 @@ window.addEventListener("DOMContentLoaded", () => {
   $(".promo__wrap").parallaxie({
     size: "contain",
   });
+
+  // Кнопка menu
+  let btn = document.querySelector(".header__nav-btn");
+  let menu = document.querySelector(".header-mobile-menu");
+  let menuItem = document.querySelectorAll(".header-menu__link");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    btn.classList.toggle("active");
+
+    menuItem.forEach((item) => {
+      item.addEventListener("click", () => {
+        btn.classList.remove("active");
+        menu.classList.remove("active");
+      });
+    });
+    // Блокировать прокрутку экрана при активном Меню
+    if (menu.classList.contains("active")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Фиксированное меню после прокрутки
+  let header = $(".header-grid");
+  let mainPage = $(".hero");
+  let mainPageH = mainPage.innerHeight();
+  let scrollPos = $(window).scrollTop();
+
+  $(window).on("scroll load resize", function () {
+    let mainPageH = mainPage.innerHeight();
+    scrollPos = $(this).scrollTop();
+
+    if (scrollPos > mainPageH) {
+      header.addClass("fixed");
+    } else {
+      header.removeClass("fixed");
+    }
+  });
+
   //Smooth Scroll
 
   function scrollTo() {
@@ -76,29 +117,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 100);
   }
   scrollTo();
-
-  // Кнопка menu
-  let btn = document.querySelector(".header__nav-btn");
-  let menu = document.querySelector(".header-mobile-menu");
-  let menuItem = document.querySelectorAll(".header-menu__link");
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("active");
-    btn.classList.toggle("active");
-
-    menuItem.forEach((item) => {
-      item.addEventListener("click", () => {
-        btn.classList.remove("active");
-        menu.classList.remove("active");
-      });
-    });
-    // Блокировать прокрутку экрана при активном Меню
-    if (menu.classList.contains("active")) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-  });
 
   // let animatedItem = document.querySelectorAll(".animate__animated");
   // animatedItem.forEach((item) => {

@@ -1,5 +1,5 @@
 html
-	@include fluidFontSize($font-size--xsmall, $font-size--base)
+	@include fluidFontSize($font-size--small, $font-size--base)
 body
 	font-family: $font-family__open
 	font-weight: $font-weight__open--regular
@@ -12,7 +12,13 @@ body
 	background-size: cover
 	background-repeat: repeat-y
 .container
-	+wrapper
+	max-width: 1165px
+	margin: 0 auto
+	padding-left: 30px
+	padding-right: 30px
+	@include _480
+		padding-left: 15px
+		padding-right: 15px
 .pacifico
 	font-family: "Pacifico"
 .section-header

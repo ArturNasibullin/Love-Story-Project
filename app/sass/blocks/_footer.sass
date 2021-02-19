@@ -8,29 +8,53 @@
 		display: flex
 		flex-flow: row wrap
 		align-items: center
-		// justify-content: space-between
+		justify-content: center
 		margin-bottom: 70px
 	&-menu
 		display: flex
 		flex-flow: row wrap
+		@include _979
+			width: 100%
+			justify-content: center
+		@include _480
+			flex-direction: column
+			align-items: center
 		&__item
 			margin-right: 60px
+			@include _979
+				margin-right: 30px
+			@include _480
+				padding: 10px 0
+				margin-right: 0
 		&__link
-		  display: inline-block
-		  font-size: 1.2rem
-		  text-transform: uppercase
-		  letter-spacing: 0.05em
-		  padding-right: 60px
-		  color: #000000
-		  transition: all 300ms ease
-		  border-right: 1px solid #00000071
-		  &:hover
+			display: inline-block
+			font-size: 1.2rem
+			text-transform: uppercase
+			letter-spacing: 0.05em
+			padding-right: 60px
+			color: #000000
+			transition: all 300ms ease
+			border-right: 1px solid #00000071
+			@include _979
+				padding-right: 30px
+			@include _480
+				padding-right: 0
+				border-right: none
+				font-size: 1.6rem
+			&:hover
 				opacity: 0.7
+			&:nth-last-child()
+				border-right: none
+
 	&-socials
 		font-size: 1.8rem
 		opacity: 0.7
+		@include _979
+			margin-top: 30px
+			font-size: 3rem
 		&__item
 			margin-right: 20px
 			transition: color 0.3s ease-in-out
+
 			&:hover
 				color: $colors__primary
