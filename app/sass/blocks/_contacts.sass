@@ -1,0 +1,36 @@
+.contacts
+	&-grid
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-column-gap: 100px
+		margin: 100px 0
+		@include _768
+			grid-template-columns: 1fr
+			grid-row-gap: 50px
+	&__subtitle
+		font-size: 2.5rem
+		color: $colors__primary
+		margin-bottom: 15px
+		@include _768
+			text-align: center
+		&.form
+			text-align: center
+	&__title
+		font-size: 3.5rem
+		color: $colors__text
+		text-transform: uppercase
+		margin-bottom: 20px
+		@include _768
+			text-align: center
+		&.form
+			text-align: center
+	&-text
+		color: $colors__dark-gray
+		font-size: 1.5rem
+		@include _768
+			text-align: center
+
+		p
+			margin: 15px 0
+		&__socilals
+			font-size: 2.8em

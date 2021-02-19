@@ -1,27 +1,25 @@
 .form
-	&__label
-		width: 100%
-		font-size: 16px
-		line-height: 150%
-		@include _768
-			margin-left: 10px
-
+	&__wrap
+		display: flex
+		flex-flow: column nowrap
+		justify-content: center
 	&__input
-		width: 100%
-		margin-bottom: 40px
-		margin-top: 10px
-		padding: 10px
-		height: 50px
-		background-color: $colors__level1
+		font-family: $font-family__corm
+		font-style: italic
 		border: none
-		color: $colors__text
+		outline: none
+		border-bottom: 1px solid #e0e0e0
+		height: 55px
+		width: 100%
 		font-size: 1.8rem
+		color: $colors__dark-gray
+		text-align: center
+		padding: 15px
+		letter-spacing: 0.05em
+		transition: all 100ms linear
+		margin-bottom: 25px
 		&:focus
 			outline: 1px solid $colors__primary
-		@include _768
-			display: block
-			margin: 10px auto 40px
-			width: 97%
-	&__textarea
-		height: 100px
-		resize: none
+	textarea
+	  resize: none
+	  height: auto
