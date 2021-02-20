@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
   var elem = document.querySelector(".hero-slider");
-  // var productSlider = document.querySelector(".product-tabs-content");
+  var trand = document.querySelector(".trand-slider");
 
   var flkty = new Flickity(elem, {
     // options
@@ -10,6 +10,15 @@ window.addEventListener("DOMContentLoaded", () => {
     friction: 0.5,
     pageDots: true,
     prevNextButtons: false,
+  });
+  var trandSlider = new Flickity(trand, {
+    // options
+    cellAlign: "right",
+    autoPlay: 7000,
+    wrapAround: true,
+    pageDots: true,
+    prevNextButtons: false,
+    // setGallerySize: false,
   });
 
   //AOS lib
@@ -50,8 +59,8 @@ window.addEventListener("DOMContentLoaded", () => {
     size: "cover",
     repeat: "repeat",
   });
-  $(".promo__wrap").parallaxie({
-    size: "contain",
+  $(".promo").parallaxie({
+    size: "cover",
   });
 
   // Button menu

@@ -573,14 +573,14 @@ body {
   justify-content: space-between;
   margin-right: 100px;
 }
-.about-grid {
+.advantages-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr) [3];
   grid-template-columns: repeat(3, 1fr);
   margin: 30px 0;
 }
-.about-item {
+.advantages-item {
   background: #cf998f;
   min-height: 100px;
   min-width: 300px;
@@ -595,9 +595,9 @@ body {
   -ms-flex-align: center;
   align-items: center;
   margin-right: 20px;
-  background: url(../img/about/bg_promo1.png);
+  background: url(../img/advantages/bg_promo1.png);
 }
-.about-item__icon {
+.advantages-item__icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -615,15 +615,15 @@ body {
   border-radius: 50%;
   background: rgba(253, 253, 253, 0.7);
 }
-.about-item__text {
+.advantages-item__text {
   margin-left: 30px;
 }
-.about-item__title {
+.advantages-item__title {
   font-size: 1.7rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
 }
-.about-item__subtitle {
+.advantages-item__subtitle {
   font-size: 1.4rem;
   color: grey;
 }
@@ -1070,13 +1070,13 @@ body {
   }
 }
 @media only screen and (max-width: 979px) {
-  .about-grid {
+  .advantages-grid {
     -ms-grid-columns: 20% 60% 20%;
     grid-template-columns: 20% 60% 20%;
     -ms-grid-rows: (1fr) [3];
     grid-template-rows: repeat(3, 1fr);
   }
-  .about-item:nth-child(1) {
+  .advantages-item:nth-child(1) {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
@@ -1084,7 +1084,7 @@ body {
     -ms-grid-column-span: 1;
     grid-column: 2/3;
   }
-  .about-item:nth-child(2) {
+  .advantages-item:nth-child(2) {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
@@ -1092,7 +1092,7 @@ body {
     -ms-grid-column-span: 1;
     grid-column: 2/3;
   }
-  .about-item:nth-child(3) {
+  .advantages-item:nth-child(3) {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
@@ -1100,7 +1100,7 @@ body {
     -ms-grid-column-span: 1;
     grid-column: 2/3;
   }
-  .about-item__title {
+  .advantages-item__title {
     font-size: 2rem;
   }
   .product-tabs-content {
@@ -1221,14 +1221,14 @@ body {
     margin: 30px 0;
     padding: 0;
   }
-  .about-grid {
+  .advantages-grid {
     -ms-grid-columns: 5% 90% 5%;
     grid-template-columns: 5% 90% 5%;
   }
-  .about-item__icon {
+  .advantages-item__icon {
     font-size: 3.5rem;
   }
-  .about-item__text {
+  .advantages-item__text {
     margin-left: 15px;
   }
   .product-nav-tabs {
