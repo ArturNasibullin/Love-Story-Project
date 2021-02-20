@@ -5,10 +5,14 @@ window.addEventListener("DOMContentLoaded", () => {
   var flkty = new Flickity(elem, {
     // options
     cellAlign: "right",
+    autoPlay: 4000,
     wrapAround: true,
     friction: 0.5,
     pageDots: false,
   });
+
+  //AOS lib
+  AOS.init();
 
   // Tranding tabs
   let tab = function () {
@@ -37,6 +41,8 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   };
   tab();
+
+  //Parallaxie
   $(".body").parallaxie({
     speed: -0.4,
     offset: 70,
@@ -47,10 +53,10 @@ window.addEventListener("DOMContentLoaded", () => {
     size: "contain",
   });
 
-  // Кнопка menu
+  // Button menu
   let btn = document.querySelector(".header__nav-btn");
   let menu = document.querySelector(".header-mobile-menu");
-  let menuItem = document.querySelectorAll(".header-menu__link");
+  let menuItem = document.querySelectorAll(".header-mobile-menu__link");
 
   btn.addEventListener("click", () => {
     menu.classList.toggle("active");
@@ -60,17 +66,18 @@ window.addEventListener("DOMContentLoaded", () => {
       item.addEventListener("click", () => {
         btn.classList.remove("active");
         menu.classList.remove("active");
+        document.body.style.overflow = "visible";
       });
     });
-    // Блокировать прокрутку экрана при активном Меню
+    // Lock body scroll when Mobile menu is active
     if (menu.classList.contains("active")) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflow = "visible";
     }
   });
 
-  // Фиксированное меню после прокрутки
+  // Fixed menu
   let header = $(".header-grid");
   let mainPage = $(".hero");
   let mainPageH = mainPage.innerHeight();
@@ -88,7 +95,6 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   //Smooth Scroll
-
   function scrollTo() {
     const links = document.querySelectorAll(".header-menu__link");
     links.forEach((each) => (each.onclick = scrollAnchors));

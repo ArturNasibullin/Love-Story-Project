@@ -64,6 +64,22 @@
 			font-size: 3rem
 			span
 				display: none
+		&__item
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				width: 0
+				height: 1px
+				top: 100%
+				background: #000000
+				left: 0px
+				right: 0
+				transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+			&:hover
+				&::before
+					width: 100%
+					right: 0px
 		&__search
 			margin-right: 30px
 
