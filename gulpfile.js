@@ -128,9 +128,9 @@ function buildcopy() {
   return src(
     [
       // Выбираем нужные файлы
-      "app/css/**/*.css",
+      "app/css/*.css",
       "app/fonts/**/*.*",
-      "app/js/**/*.js",
+      "app/js/*.js",
       "app/**/*.html",
     ],
     { base: "app" }
@@ -187,7 +187,6 @@ exports.build = series(
   libsJS,
   libsCSS,
   transferImg,
-  cleanimg,
   images,
   buildcopy
 );

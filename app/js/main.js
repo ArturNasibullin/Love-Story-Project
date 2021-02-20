@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
   var elem = document.querySelector(".hero-slider");
-  // var trandingSlider = document.querySelector(".tranding-tabs-content");
+  // var productSlider = document.querySelector(".product-tabs-content");
 
   var flkty = new Flickity(elem, {
     // options
@@ -8,16 +8,17 @@ window.addEventListener("DOMContentLoaded", () => {
     autoPlay: 4000,
     wrapAround: true,
     friction: 0.5,
-    pageDots: false,
+    pageDots: true,
+    prevNextButtons: false,
   });
 
   //AOS lib
   AOS.init();
 
-  // Tranding tabs
+  // product tabs
   let tab = function () {
-    const tabNav = document.querySelectorAll(".tranding-nav-tab"),
-      tabContent = document.querySelectorAll(".tranding-tabs-item");
+    const tabNav = document.querySelectorAll(".product-nav-tab"),
+      tabContent = document.querySelectorAll(".product-tabs-item");
 
     tabNav.forEach((item) => {
       item.addEventListener("click", selectTabNav);

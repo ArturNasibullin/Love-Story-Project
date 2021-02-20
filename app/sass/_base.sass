@@ -1,8 +1,8 @@
 html
 	@include fluidFontSize($font-size--small, $font-size--base)
 body
-	font-family: $font-family__open
-	font-weight: $font-weight__open--regular
+	font-family: $font-family__lato
+	font-weight: $font-weight__lato--regular
 	line-height: $line-height
 	color: $colors__text
 	overflow-x: hidden
@@ -24,6 +24,17 @@ body
 .section-header
 	padding: 5em 0 3em
 	text-align: center
+	position: relative
+	&__big
+		font-family: $font-family__lato
+		position: absolute
+		top: -70px
+		left: 0
+		right: 0
+		font-size: 15rem
+		color: rgba(0, 0, 0, 0.04)
+		font-weight: $font-weight__lato--bold
+		letter-spacing: 1px
 	&__title
 		letter-spacing: 0.05em
 		text-transform: uppercase

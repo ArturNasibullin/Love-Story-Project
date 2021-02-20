@@ -95,21 +95,36 @@ input[type="submit"] {
 }
 
 @font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Light.eot");
-  src: url("../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "Roboto Condensed Regular";
+  src: url("../fonts/RobotoCondensed-Regular.eot");
+  src: url("../fonts/RobotoCondensed-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-Regular.woff") format("woff"), url("../fonts/RobotoCondensed-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato Light";
+  src: url("../fonts/Lato-Light.eot");
+  src: url("../fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Light.woff") format("woff"), url("../fonts/Lato-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../fonts/Lato-Regular.eot");
+  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Open Sans Regular";
-  src: url("../fonts/OpenSans-Regular.eot");
-  src: url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "Lato Bold";
+  src: url("../fonts/Lato-Bold.eot");
+  src: url("../fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -384,7 +399,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans Regular";
+  font-family: "Lato Regular", Arial, sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #212122;
@@ -417,6 +432,19 @@ body {
 .section-header {
   padding: 5em 0 3em;
   text-align: center;
+  position: relative;
+}
+
+.section-header__big {
+  font-family: "Lato Regular", Arial, sans-serif;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  right: 0;
+  font-size: 15rem;
+  color: rgba(0, 0, 0, 0.04);
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .section-header__title {
@@ -892,7 +920,7 @@ body {
   color: #808080;
 }
 
-.tranding-nav-tabs {
+.product-nav-tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -907,7 +935,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-  .tranding-nav-tabs {
+  .product-nav-tabs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -915,7 +943,7 @@ body {
   }
 }
 
-.tranding-nav-tab {
+.product-nav-tab {
   color: #808080;
   font-size: 1.5rem;
   letter-spacing: 0.15em;
@@ -930,24 +958,24 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-  .tranding-nav-tab {
+  .product-nav-tab {
     display: inline-block;
     padding: 10px 0;
   }
 }
 
-.tranding-nav-tab.active {
+.product-nav-tab.active {
   color: #212122;
   border-bottom: 1px solid #212122;
 }
 
 @media only screen and (max-width: 480px) {
-  .tranding-nav-tab.active {
+  .product-nav-tab.active {
     border: 0.5px solid #00000062;
   }
 }
 
-.tranding-tabs-content {
+.product-tabs-content {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -962,32 +990,32 @@ body {
 }
 
 @media only screen and (max-width: 979px) {
-  .tranding-tabs-content {
+  .product-tabs-content {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .tranding-tabs-content {
+  .product-tabs-content {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .tranding-tabs-content {
+  .product-tabs-content {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     place-items: start center;
   }
 }
 
-.tranding-tabs-item {
+.product-tabs-item {
   display: none;
 }
 
-.tranding-tabs-item.active {
+.product-tabs-item.active {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 280px;
@@ -998,14 +1026,14 @@ body {
   max-height: 480px;
 }
 
-.tranding-tabs-item__link {
+.product-tabs-item__link {
   position: relative;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
 }
 
-.tranding-tabs-item__link:hover .tranding-tabs-item__border-one {
+.product-tabs-item__link:hover .product-tabs-item__border-one {
   opacity: 1;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -1015,7 +1043,7 @@ body {
   height: calc(100% + 7px);
 }
 
-.tranding-tabs-item__link:hover .tranding-tabs-item__border-two {
+.product-tabs-item__link:hover .product-tabs-item__border-two {
   opacity: 1;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -1025,19 +1053,19 @@ body {
   height: calc(100% + 7px);
 }
 
-.tranding-tabs-item__link:hover .tranding-tabs-item__quickview {
+.product-tabs-item__link:hover .product-tabs-item__quickview {
   margin-bottom: 30px;
   opacity: 1;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
-.tranding-tabs-item__img {
+.product-tabs-item__img {
   max-height: 100%;
   margin: 0 auto;
 }
 
-.tranding-tabs-item__title {
+.product-tabs-item__title {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -1054,13 +1082,13 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .tranding-tabs-item__title {
+  .product-tabs-item__title {
     text-align: center;
     font-size: 2.5rem;
   }
 }
 
-.tranding-tabs-item__price {
+.product-tabs-item__price {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
@@ -1072,19 +1100,19 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .tranding-tabs-item__price {
+  .product-tabs-item__price {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 30px;
   }
 }
 
-.tranding-tabs-item__btn {
+.product-tabs-item__btn {
   width: 90%;
   margin: 0 auto;
 }
 
-.tranding-tabs-item__border-one, .tranding-tabs-item__border-two {
+.product-tabs-item__border-one, .product-tabs-item__border-two {
   border: 1px solid #dbb5ae;
   position: absolute;
   top: 0;
@@ -1096,7 +1124,7 @@ body {
   transition: all 300ms ease-in-out;
 }
 
-.tranding-tabs-item__quickview {
+.product-tabs-item__quickview {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1108,7 +1136,7 @@ body {
   transition: all 300ms ease-in-out;
 }
 
-.tranding-tabs-item__quickview span {
+.product-tabs-item__quickview span {
   height: 3.6rem;
   line-height: 3.6rem;
   text-transform: uppercase;
@@ -1123,7 +1151,7 @@ body {
   transition: all 300ms ease-in-out;
 }
 
-.tranding-tabs-item__quickview span:hover {
+.product-tabs-item__quickview span:hover {
   color: #212122;
   border: 1px solid #747474;
   background-color: #FFF;
@@ -1153,6 +1181,7 @@ body {
 }
 
 .promo-text__title {
+  font-family: "Roboto Condensed Regular";
   font-size: 2.8rem;
   line-height: 39px;
   letter-spacing: 0.1em;
@@ -1290,7 +1319,7 @@ body {
   grid-row: 1/2;
 }
 
-.shop-tabs-item__link:hover .tranding-tabs-item__border-one {
+.shop-tabs-item__link:hover .product-tabs-item__border-one {
   opacity: 1;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -1300,7 +1329,7 @@ body {
   height: calc(100% + 7px);
 }
 
-.shop-tabs-item__link:hover .tranding-tabs-item__border-two {
+.shop-tabs-item__link:hover .product-tabs-item__border-two {
   opacity: 1;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -1310,7 +1339,7 @@ body {
   height: calc(100% + 7px);
 }
 
-.shop-tabs-item__link:hover .tranding-tabs-item__quickview {
+.shop-tabs-item__link:hover .product-tabs-item__quickview {
   margin-bottom: 30px;
   opacity: 1;
   -webkit-transition: all 300ms ease-in-out;
