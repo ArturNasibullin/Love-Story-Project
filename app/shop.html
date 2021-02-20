@@ -13,7 +13,7 @@
 	<!-- Add libs -->
 	<link rel="stylesheet" href="css/libs.min.css">
 	<!-- Add styles -->
-	<link rel="stylesheet" href="css/style.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
 	<!-- IcoMoon -->
 	<link rel="stylesheet" href="fonts/style.css" />
 </head>
@@ -24,13 +24,13 @@
 			<div class="header__wrap">
 				<div class="header-grid">
 					<div class="header-logo">
-						<a href="#"><img src="img/logo.jpg" alt="Лого сайта"></a>
+						<a href="#"><img src="img/logo.png" alt="Лого сайта"></a>
 					</div>
 					<ul class="header-menu">
 						<li class="header-menu__item"><a class="header-menu__link" href="#">Главная</a></li>
-						<li class="header-menu__item"><a class="header-menu__link" href="#">О нас</a></li>
+						<li class="header-menu__item"><a class="header-menu__link" href="#advantages">О нас</a></li>
 						<li class="header-menu__item"><a class="header-menu__link" href="#">Блог</a></li>
-						<li class="header-menu__item"><a class="header-menu__link" href="#">Магазин</a></li>
+						<li class="header-menu__item"><a class="header-menu__link" href="shop.html">Магазин</a></li>
 						<li class="header-menu__item"><a class="header-menu__link" href="#contacts">Контакты</a></li>
 					</ul>
 					<div class="header-add">
@@ -59,7 +59,7 @@
 				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link header-menu__link" href="#">Блог</a>
 				</li>
 				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link header-menu__link "
-						href="shop.html">Магазин</a></li>
+						href="#">Магазин</a></li>
 				<li class="header-mobile-menu__item"><a class="header-mobile-menu__link header-menu__link"
 						href="#contacts">Контакты</a></li>
 				<li class="header-mobile-menu__item header-mobile-menu-socials">
@@ -76,6 +76,12 @@
 			<div class="section-header">
 				<h2 class="section-header__title">Онлайн - магазин</h2>
 				<div class="section-header__separator"></div>
+			</div>
+			<div class="shop-nav-tabs">
+				<button data-tab="1" class="shop-nav-tab active">Одежда</button>
+				<button data-tab="2" class="shop-nav-tab">Обувь</button>
+				<button data-tab="3" class="shop-nav-tab">Аксессуары</button>
+				<button data-tab="4" class="shop-nav-tab">Сумки</button>
 			</div>
 			<div class="shop-tabs-content">
 				<div data-index="1" class="shop-tabs-item active">
@@ -279,11 +285,10 @@
 			</div>
 		</div>
 	</section>
-
-	<footer class="footer">
+	<footer class=" footer">
 		<div class="container">
 			<div class="footer__wrap">
-				<div class="footer-logo"><img src="img/logo.jpg" alt="" class="footer-logo__img"></div>
+				<div class="footer-logo"><img src="img/logo.png" alt="" class="footer-logo__img"></div>
 				<div class="footer-navigation">
 					<ul class="footer-menu">
 						<li class="footer-menu__item"> <a href="#" class="footer-menu__link">Главная</a></li>
@@ -303,8 +308,9 @@
 	</footer>
 
 
+
 	<script src="js/libs.min.js"></script>
-	<script src="js/main.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

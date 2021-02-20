@@ -2,8 +2,10 @@
 	&-grid
 		margin: 100px 0 50px
 		display: grid
-		grid-template-columns: repeat(2, 1fr)
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
 		column-gap: 80px
+	&__img
+		height: 100%
 	&__title
 		line-height: 1.1
 		font-size: 4.5rem

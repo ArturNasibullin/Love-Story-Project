@@ -1,8 +1,29 @@
 window.addEventListener("DOMContentLoaded", () => {
-  var elem = document.querySelector(".hero-slider");
   var trand = document.querySelector(".trand-slider");
 
-  var flkty = new Flickity(elem, {
+  var options = {
+    cellAlign: "left",
+    autoPlay: 7000,
+    wrapAround: true,
+    pageDots: true,
+    prevNextButtons: false,
+    contain: true,
+  };
+  function myFunction(x) {
+    if (x.matches) {
+      // If media query matches
+      options.cellAlign = "center";
+    } else {
+      options.cellAlign = "left";
+    }
+  }
+  var x = window.matchMedia("(max-width: 768px)");
+  myFunction(x); // Call listener function at run time
+  x.addListener(myFunction); // Attach listener function on state changes
+  var trandSlider = new Flickity(trand, options);
+
+  var hero = document.querySelector(".hero-slider");
+  var heroSlider = new Flickity(hero, {
     // options
     cellAlign: "right",
     autoPlay: 4000,
@@ -11,23 +32,14 @@ window.addEventListener("DOMContentLoaded", () => {
     pageDots: true,
     prevNextButtons: false,
   });
-  var trandSlider = new Flickity(trand, {
-    // options
-    cellAlign: "right",
-    autoPlay: 7000,
-    wrapAround: true,
-    pageDots: true,
-    prevNextButtons: false,
-    // setGallerySize: false,
-  });
 
   //AOS lib
   AOS.init();
 
   // product tabs
-  let tab = function () {
-    const tabNav = document.querySelectorAll(".product-nav-tab"),
-      tabContent = document.querySelectorAll(".product-tabs-item");
+  let tab = function (nav, items) {
+    const tabNav = document.querySelectorAll(nav),
+      tabContent = document.querySelectorAll(items);
 
     tabNav.forEach((item) => {
       item.addEventListener("click", selectTabNav);
@@ -50,7 +62,9 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     }
   };
-  tab();
+  // main page
+  tab(".product-nav-tab", ".product-tabs-item");
+  tab(".shop-nav-tab", ".shop-tabs-item");
 
   //Parallaxie
   $(".body").parallaxie({
