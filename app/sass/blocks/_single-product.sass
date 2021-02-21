@@ -1,0 +1,64 @@
+.single-product
+	&-grid
+		margin: 50px 0 100px
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		column-gap: 50px
+		@include _768
+			grid-template-columns: 1fr
+			margin: 20px 0 100px
+	&-slider
+		@include _768
+			margin: 40px
+	&-text
+		@include _768
+			padding: 0 15px
+	&__title
+		font-size: 4.2rem
+		line-height: 0.7
+	&__price
+		font-size: 3.5rem
+		margin: 20px 0
+		font-family: $font-family__corm
+	&__descr
+		text-align: justify
+		line-height: 1.7
+		margin: 40px 0
+	&__size
+		font-size: 1.4rem
+		text-transform: uppercase
+		letter-spacing: 2px
+		background: transparent
+		height: 54px
+		width: 70%
+		text-align: center
+		border: 1px solid $colors__primary
+		padding: 15px 10px
+		outline: none
+		&:focus
+			outline: 1px solid $colors__primary
+		@include _480
+			width: 100%
+	&__quantity
+		display: block
+		width: 100%
+		margin: 0 auto
+	&__input
+		margin: 20px 10px
+		height: 54px
+		width: 70px
+		text-align: center
+		border: 1px solid $colors__primary
+		padding: 0
+		background: transparent !important
+		border-radius: 0
+		font-size: 1.6rem
+		&:focus
+			outline: 1px solid $colors__primary
+	&__btn
+		@include _480
+			width: 100%
+
+.breadcrumbs
+	&__text
+		margin: 20px 0

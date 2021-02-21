@@ -1,42 +1,8 @@
 window.addEventListener("DOMContentLoaded", () => {
-  var trand = document.querySelector(".trand-slider");
-
-  var options = {
-    cellAlign: "left",
-    autoPlay: 7000,
-    wrapAround: true,
-    pageDots: true,
-    prevNextButtons: false,
-    contain: true,
-  };
-  function myFunction(x) {
-    if (x.matches) {
-      // If media query matches
-      options.cellAlign = "center";
-    } else {
-      options.cellAlign = "left";
-    }
-  }
-  var x = window.matchMedia("(max-width: 768px)");
-  myFunction(x); // Call listener function at run time
-  x.addListener(myFunction); // Attach listener function on state changes
-  var trandSlider = new Flickity(trand, options);
-
-  var hero = document.querySelector(".hero-slider");
-  var heroSlider = new Flickity(hero, {
-    // options
-    cellAlign: "right",
-    autoPlay: 4000,
-    wrapAround: true,
-    friction: 0.5,
-    pageDots: true,
-    prevNextButtons: false,
-  });
-
   //AOS lib
   AOS.init();
 
-  // product tabs
+  // Tabs
   let tab = function (nav, items) {
     const tabNav = document.querySelectorAll(nav),
       tabContent = document.querySelectorAll(items);
@@ -62,20 +28,8 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     }
   };
-  // main page
   tab(".product-nav-tab", ".product-tabs-item");
   tab(".shop-nav-tab", ".shop-tabs-item");
-
-  //Parallaxie
-  $(".body").parallaxie({
-    speed: -0.4,
-    offset: 70,
-    size: "cover",
-    repeat: "repeat",
-  });
-  $(".promo").parallaxie({
-    size: "cover",
-  });
 
   // Button menu
   let btn = document.querySelector(".header__nav-btn");
@@ -103,15 +57,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Fixed menu
   let header = $(".header-grid");
-  let mainPage = $(".hero");
-  let mainPageH = mainPage.innerHeight();
   let scrollPos = $(window).scrollTop();
 
   $(window).on("scroll load resize", function () {
-    let mainPageH = mainPage.innerHeight();
     scrollPos = $(this).scrollTop();
 
-    if (scrollPos > mainPageH) {
+    if (scrollPos > 170) {
       header.addClass("fixed");
     } else {
       header.removeClass("fixed");
@@ -147,32 +98,4 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 100);
   }
   scrollTo();
-
-  // let animatedItem = document.querySelectorAll(".animate__animated");
-  // animatedItem.forEach((item) => {
-  //   item.style.opacity = 0;
-  //   let effect = item.dataset.effect;
-  //   var waypoint = new Waypoint({
-  //     element: item,
-  //     handler: function (direction) {
-  //       if (effect === "fadeInUp") {
-  //         item.classList.add("animate__fadeInUp");
-  //       } else if (effect === "fadeInLeft") {
-  //         item.classList.add("animate__fadeInLeft");
-  //       } else if (effect === "fadeInRight") {
-  //         item.classList.add("animate__fadeInRight");
-  //       } else if (effect === "flipInX") {
-  //         item.classList.add("animate__flipInX");
-  //         item.style.opacity = 1;
-  //       } else if (effect === "zoomIn") {
-  //         item.classList.add("animate__zoomIn");
-  //         item.style.opacity = 1;
-  //       } else if (effect === "pulse") {
-  //         item.classList.add("animate__pulse");
-  //         item.style.opacity = 1;
-  //       }
-  //     },
-  //     offset: "75%",
-  //   });
-  // });
 });

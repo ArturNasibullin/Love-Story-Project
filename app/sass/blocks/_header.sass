@@ -9,18 +9,20 @@
 		align-items: center
 		min-height: 100px
 		width: 100%
-		max-width: 1165px
+		position: absolute
+		top: 0
+		// left: 0
 		padding-left: 20px
 		display: grid
 		grid-template-columns: 1fr 8fr 3fr
-		@include _1170
-			max-width: 979px
-		@include _768
-			max-width: 710px
 		@include _480
 			grid-template-columns: 20% 60% 20%
 		&.fixed
 			position: fixed
+			top: 0
+			right: 0
+			font-size: 1.8rem
+			padding: 0 30px
 	&-logo
 		text-align: center
 		vertical-align: middle
@@ -59,9 +61,11 @@
 		display: flex
 		flex-flow: row wrap
 		justify-content: flex-end
+		@include _768
+			font-size: 2rem
 		@include _480
 			justify-content: space-evenly
-			font-size: 3rem
+			font-size: 4rem
 			span
 				display: none
 		&__item
@@ -81,8 +85,7 @@
 					width: 100%
 					right: 0px
 		&__search
-			margin-right: 30px
-
+			margin-right: 40px
 .header-mobile-menu
 	opacity: 0
 	display: flex
