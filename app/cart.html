@@ -73,8 +73,134 @@
 
 	<section class="cart">
 		<div class="container">
-			<div class="cart-grid">
-
+			<div class="cart-grid cart-grid-header">
+				<div class="cart-item">
+				</div>
+				<div class="cart-item">
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__product-name">Товар</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__price">Цена</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__quantity">Кол-во</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__subtotal">Итого</div>
+				</div>
+			</div>
+			<div class="cart-grid cart-grid-items">
+				<div class="cart-item">
+					<div class="cart-item__delete">
+						<button class="btn btn--delete"> <i class="icon-cross"></i></button>
+					</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__icon">
+						<a href="#"><img src="img/trand/product-3.jpg" alt="" class="cart-item__img"></a>
+					</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__product-name"> <a href="#">Martina Marini</a> </div>
+				</div>
+				<div class="cart-item">
+					<p class="single-product__price text" id="price">2500 р.</p>
+				</div>
+				<div class="cart-item">
+					<div class="single-product__quantity quantity">
+						<button type="button" class="btn btn--quantity quantity btn--quantity-cart" data-position="minus">
+							<i class="icon-minus"></i>
+						</button>
+						<input type="text" name="quantity" class="quantityInput cart-item__input single-product__input"
+							value="1" min="1" max="10">
+						<button type="button" class="btn btn--quantity quantity btn--quantity-cart" data-position="plus">
+							<i class="icon-plus"></i>
+						</button>
+					</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__subtotal">
+						<div class="single-product__price"><span class="single-product__total" id="totalPrice">7500
+							</span>р.</div>
+					</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__delete">
+						<button class="btn btn--delete"> <i class="icon-cross"></i></button>
+					</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__icon">
+						<a href="#"><img src="img/trand/product-3.jpg" alt="" class="cart-item__img"></a>
+					</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__product-name "><a href="">SHEIN Однотонное расклешенное платье с молнией сзади</a>
+					</div>
+				</div>
+				<div class="cart-item">
+					<p class="single-product__price text" id="price">2210 р.</p>
+				</div>
+				<div class="cart-item">
+					<div class="single-product__quantity quantity">
+						<button type="button" class="btn btn--quantity quantity btn--quantity-cart" data-position="minus">
+							<i class="icon-minus"></i>
+						</button>
+						<input type="text" name="quantity" class="quantityInput cart-item__input single-product__input"
+							value="1" min="1" max="10">
+						<button type="button" class="btn btn--quantity quantity btn--quantity-cart" data-position="plus">
+							<i class="icon-plus"></i>
+						</button>
+					</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__subtotal">
+						<div class="single-product__price"><span class="single-product__total" id="totalPrice">2500
+							</span>р.</div>
+					</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__delete">
+						<button class="btn btn--delete"> <i class="icon-cross"></i></button>
+					</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__icon">
+						<a href="#"><img src="img/trand/product-2.jpg" alt="" class="cart-item__img"></a>
+					</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__product-name "><a href="">Gepur Gepur Gepur Gepur Gepur Gepur Gepur Gepur Gepur
+							Gepur</a></div>
+				</div>
+				<div class="cart-item">
+					<p class="single-product__price text" id="price">1500 р.</p>
+				</div>
+				<div class="cart-item">
+					<div class="single-product__quantity quantity">
+						<button type="button" class="btn btn--quantity quantity btn--quantity-cart" data-position="minus">
+							<i class="icon-minus"></i>
+						</button>
+						<input type="text" name="quantity" class="quantityInput cart-item__input single-product__input"
+							value="1" min="1" max="10">
+						<button type="button" class="btn btn--quantity quantity btn--quantity-cart" data-position="plus">
+							<i class="icon-plus"></i>
+						</button>
+					</div>
+				</div>
+				<div class="cart-item">
+					<div class="cart-item__subtotal">
+						<div class="single-product__price"><span class="single-product__total" id="totalPrice">2500
+							</span>р.</div>
+					</div>
+				</div>
+			</div>
+			<div class="cart-total">
+				<h2 class="cart-total__title">Итоговая стоимость:</h2>
+				<p class="cart-total__num">10000р.</p>
+				<button class="btn btn--cart-buy">Перейти к оплате</button>
 			</div>
 		</div>
 	</section>
@@ -100,11 +226,9 @@
 		</div>
 	</footer>
 
-
-
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/index.js"></script>
+	<script src="js/single-product.js"></script>
 </body>
 
 </html>

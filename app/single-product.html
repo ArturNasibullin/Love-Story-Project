@@ -88,7 +88,7 @@
 				</div>
 				<div class="single-product-text">
 					<h1 class="single-product__title">Платье белое</h1>
-					<p class="single-product__price text">2500 р.</p>
+					<p class="single-product__price text" id="price">2500 р.</p>
 					<p class="single-product__category text">Верхняя одежда / Платья</p>
 					<p class="single-product__descr text">A small river named Duden flows by their place and supplies it with
 						the
@@ -111,17 +111,17 @@
 							<option value="l">Extra Large</option>
 						</select>
 						<div class="single-product__quantity quantity">
-							<button type="button" class="btn btn--quantity btn--quantity-minus">
+							<button type="button" class="btn btn--quantity quantity" data-position="minus">
 								<i class="icon-minus"></i>
 							</button>
-							<input type="text" id="quantity" name="quantity" class="single-product__input" value="1" min="1"
-								max="100">
-							<button type="button" class="btn btn--quantity btn--quantity-plus">
+							<input type="text" id="quantityInput" name="quantity" class="single-product__input" value="1"
+								min="1" max="100">
+							<button type="button" class="btn btn--quantity quantity" data-position="plus">
 								<i class="icon-plus"></i>
 							</button>
 						</div>
-						<div class="single-product__price">Итого: <span
-								class="single-product__total single-product__price">2500
+						<div class="single-product__price">Итого: <span class="single-product__total single-product__price"
+								id="totalPrice">2500
 							</span>р.</div>
 						<button type="submit" class="btn btn--add-to-cart single-product__btn">Добавить в корзину</button>
 					</form>

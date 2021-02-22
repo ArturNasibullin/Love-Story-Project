@@ -1,0 +1,54 @@
+.cart
+	&-grid
+		margin: 50px 0
+		display: grid
+		grid-template-areas: "delete icon product-name price quantity subtotal"
+		grid-template-columns: repeat(auto-fill, 5% minmax(8%, 11%) minmax(30%, 40%) 15% 15% 10%)
+		justify-items: start
+		align-items: center
+		column-gap: 5px
+		grid-row-gap: 15px
+		&-header
+			justify-content: center
+			padding-bottom: 10px
+			border-bottom: 1px solid $colors__dark-gray
+	&-item
+		font-size: 1.8rem
+		&__delete
+			grid-area: delete
+			grid-column: 1/2
+		&__icon
+			grid-area: icon
+			grid-column: 2/3
+		&__product-name
+			grid-area: product-name
+			grid-column: 3/4
+			padding: 0 10px
+			font-family: $font-family__corm
+			font-size: 2.3rem
+			a
+				text-decoration: underline
+		&__price
+			grid-area: price
+			grid-column: 4/5
+		&__quantity
+			grid-area: quantity
+			grid-column: 5/6
+		&__subtotal
+			grid-area: subtotal
+			grid-column: 6/7
+		&__input
+			padding: 0
+			height: 27px
+			margin: 0 10px
+			width: 40px
+	&-total
+		display: block
+		text-align: right
+		&__num
+			font-size: 3.5rem
+			font-family: $font-family__corm
+			margin-bottom: 20px
+.cart-grid-header
+	text-align: center
+	font-weight: 700

@@ -1,27 +1,30 @@
 window.addEventListener("DOMContentLoaded", () => {
   //Form
-  let quantityBtnPlus = document.querySelector(".btn--quantity-plus");
-  let quantityBtnMinus = document.querySelector(".btn--quantity-minus");
-  let quantityInput = document.querySelector(".single-product__input");
-  let price = document.querySelector(".single-product__price").textContent;
-  let total = document.querySelector(".single-product__total");
+  let quantityBtn = document.querySelectorAll(".quantity");
+  let quantityInput = document.getElementById("quantityInput");
+  let price = document.getElementById("price").textContent;
+  let total = document.getElementById("totalPrice");
   let number = 1;
 
   price = price.replace(/р./, "");
   quantityInput.addEventListener("change", (event) => {
-    total.innerHTML = event.target.value * price;
+    event.preventDefault();
     number = event.target.value;
+    total.innerHTML = event.target.value * +price;
   });
 
-  quantityBtnPlus.addEventListener("click", () => {
-    number++;
-    quantityInput.value = number;
-    total.innerHTML = number * price;
-  });
-  quantityBtnMinus.addEventListener("click", () => {
-    if (number > 1) number--;
-    quantityInput.value = number;
-    total.innerHTML = number * price;
+  quantityBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.dataset.position == "plus") {
+        number++;
+        quantityInput.value = number;
+        total.innerHTML = number * price;
+      } else if (btn.dataset.position == "minus" && number > 1) {
+        number--;
+        quantityInput.value = number;
+        total.innerHTML = number * price;
+      }
+    });
   });
 
   // Slider
@@ -29,10 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
   var singleProductSlider = new Flickity(singleProduct, {
     // options
     cellAlign: "left",
-    //  autoPlay: 4000,
-    //  wrapAround: true,
     pageDots: true,
-    //  prevNextButtons: false,
   });
 
   var options = {
