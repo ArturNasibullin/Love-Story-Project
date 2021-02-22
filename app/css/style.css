@@ -1960,9 +1960,8 @@ body {
   margin: 50px 0;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "delete icon product-name price quantity subtotal";
-  -ms-grid-columns: (5% minmax(8%, 11%) minmax(30%, 40%) 15% 15% 10%)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 5% minmax(8%, 11%) minmax(30%, 40%) 15% 15% 10%);
+  -ms-grid-columns: 5% minmax(8%, 11%) minmax(30%, 40%) 15% 15% 10%;
+      grid-template-columns: 5% minmax(8%, 11%) minmax(30%, 40%) 15% 15% 10%;
   justify-items: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1970,6 +1969,25 @@ body {
   -webkit-column-gap: 5px;
           column-gap: 5px;
   grid-row-gap: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .cart-grid {
+    -ms-grid-columns: 5% 0% 45% 15% 20% 15%;
+        grid-template-columns: 5% 0% 45% 15% 20% 15%;
+    justify-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cart-grid {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 30px 0 60px 40px 40px 40px;
+        grid-template-rows: 30px 0 60px 40px 40px 40px;
+    justify-items: start;
+    grid-row-gap: 10px;
+  }
 }
 
 .cart-grid-header {
@@ -1980,69 +1998,108 @@ body {
   border-bottom: 1px solid #808080;
 }
 
+@media only screen and (max-width: 768px) {
+  .cart-grid-header {
+    -ms-grid-columns: 0% 0% 50% 15% 20% 15%;
+        grid-template-columns: 0% 0% 50% 15% 20% 15%;
+    justify-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cart-grid-header {
+    display: none;
+  }
+}
+
 .cart-item {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
 }
 
 .cart-item__delete {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: delete;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
 }
 
 .cart-item__icon {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: icon;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
 
+@media only screen and (max-width: 600px) {
+  .cart-item__icon {
+    display: none;
+  }
+}
+
 .cart-item__product-name {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: product-name;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
   padding: 0 10px;
   font-family: "Cormorant Garamond";
-  font-size: 2.3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .cart-item__product-name {
+    padding: 0;
+    font-size: 3rem;
+  }
 }
 
 .cart-item__product-name a {
+  font-size: 2rem;
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 600px) {
+  .cart-item__product-name a {
+    font-size: 2.5rem;
+  }
+}
+
 .cart-item__price {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: price;
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4/5;
+  font-family: "Cormorant Garamond";
+}
+
+@media only screen and (max-width: 600px) {
+  .cart-item__price::before {
+    content: attr(data-title) ": ";
+    font-weight: 700;
+    margin-right: 10px;
+  }
 }
 
 .cart-item__quantity {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-  grid-area: quantity;
   -ms-grid-column: 5;
   -ms-grid-column-span: 1;
   grid-column: 5/6;
 }
 
+@media only screen and (max-width: 600px) {
+  .cart-item__quantity::before {
+    content: attr(data-title) ": ";
+    font-family: "Cormorant Garamond";
+    font-weight: 700;
+    margin-right: 10px;
+  }
+}
+
 .cart-item__subtotal {
-  -ms-grid-row: 1;
-  -ms-grid-column: 6;
-  grid-area: subtotal;
   -ms-grid-column: 6;
   -ms-grid-column-span: 1;
   grid-column: 6/7;
+}
+
+@media only screen and (max-width: 600px) {
+  .cart-item__subtotal {
+    border-bottom: 1px solid #808080;
+  }
 }
 
 .cart-item__input {
@@ -2050,6 +2107,16 @@ body {
   height: 27px;
   margin: 0 10px;
   width: 40px;
+  text-align: center;
+  border: 1px solid #cf998f;
+  padding: 0;
+  background: transparent !important;
+  border-radius: 0;
+  font-size: 1.6rem;
+}
+
+.cart-item:focus {
+  outline: 1px solid #cf998f;
 }
 
 .cart-total {
@@ -2057,14 +2124,29 @@ body {
   text-align: right;
 }
 
+@media only screen and (max-width: 600px) {
+  .cart-total {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
 .cart-total__num {
-  font-size: 3.5rem;
   font-family: "Cormorant Garamond";
+  font-size: 3rem;
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .cart-total__num {
+    font-size: 4rem;
+  }
 }
 
 .cart-grid-header {
   text-align: center;
   font-weight: 700;
+  font-size: 1.8rem;
+  font-family: "Cormorant Garamond";
 }
 /*# sourceMappingURL=style.css.map */

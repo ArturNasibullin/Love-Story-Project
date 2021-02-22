@@ -2,53 +2,99 @@
 	&-grid
 		margin: 50px 0
 		display: grid
-		grid-template-areas: "delete icon product-name price quantity subtotal"
-		grid-template-columns: repeat(auto-fill, 5% minmax(8%, 11%) minmax(30%, 40%) 15% 15% 10%)
+		grid-template-columns: 5% minmax(8%, 11%) minmax(30%, 40%) 15% 15% 10%
 		justify-items: start
 		align-items: center
 		column-gap: 5px
 		grid-row-gap: 15px
+		@include _768
+			grid-template-columns: 5% 0% 45% 15% 20% 15%
+			justify-items: center
+		@include _600
+			grid-template-columns: 100%
+			grid-template-rows: 30px 0 60px 40px 40px 40px
+			justify-items: start
+			grid-row-gap: 10px
 		&-header
 			justify-content: center
 			padding-bottom: 10px
 			border-bottom: 1px solid $colors__dark-gray
+			@include _768
+				grid-template-columns: 0% 0% 50% 15% 20% 15%
+				justify-items: center
+			@include _600
+				display: none
 	&-item
-		font-size: 1.8rem
+		font-size: 2.5rem
 		&__delete
-			grid-area: delete
 			grid-column: 1/2
 		&__icon
-			grid-area: icon
 			grid-column: 2/3
+			@include _600
+				display: none
+		&__img
+
 		&__product-name
-			grid-area: product-name
 			grid-column: 3/4
 			padding: 0 10px
 			font-family: $font-family__corm
-			font-size: 2.3rem
+			@include _600
+				padding: 0
+				font-size: 3rem
 			a
+				font-size: 2rem
 				text-decoration: underline
+				@include _600
+					font-size: 2.5rem
 		&__price
-			grid-area: price
 			grid-column: 4/5
+			font-family: $font-family__corm
+			@include _600
+				&::before
+					content: attr(data-title) ": "
+					font-weight: 700
+					margin-right: 10px
 		&__quantity
-			grid-area: quantity
 			grid-column: 5/6
+			@include _600
+				&::before
+					content: attr(data-title) ": "
+					font-family: $font-family__corm
+					font-weight: 700
+					margin-right: 10px
 		&__subtotal
-			grid-area: subtotal
 			grid-column: 6/7
+			@include _600
+				border-bottom: 1px solid $colors__dark-gray
 		&__input
 			padding: 0
 			height: 27px
 			margin: 0 10px
 			width: 40px
+			text-align: center
+			border: 1px solid $colors__primary
+			padding: 0
+			background: transparent !important
+			border-radius: 0
+			font-size: 1.6rem
+		&:focus
+			outline: 1px solid $colors__primary
 	&-total
 		display: block
 		text-align: right
+		@include _600
+			text-align: center
+			margin-bottom: 40px
+
 		&__num
-			font-size: 3.5rem
 			font-family: $font-family__corm
+			font-size: 3rem
 			margin-bottom: 20px
+			@include _600
+				font-size: 4rem
+
 .cart-grid-header
 	text-align: center
 	font-weight: 700
+	font-size: 1.8rem
+	font-family: $font-family__corm
