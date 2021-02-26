@@ -40,26 +40,26 @@
 				font-size: 2.2rem
 				width: 100%
 				text-align: right
-		&__link
-			position: relative
-			&::before
-				content: ''
-				position: absolute
-				width: 0
-				height: 1px
-				top: 100%
-				background: #000000
-				left: 0px
-				right: 0
-				transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
-			&:hover
+			a
+				position: relative
 				&::before
-					width: 100%
-					right: 0px
+					content: ''
+					position: absolute
+					width: 0
+					height: 1px
+					top: 100%
+					background: #000000
+					left: 0px
+					right: 0
+					transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+				&:hover
+					&::before
+						width: 100%
+						right: 0px
 	&-add
-		display: flex
-		flex-flow: row wrap
-		justify-content: flex-end
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		justify-items: center
 		@include _768
 			font-size: 2rem
 		@include _480
@@ -67,9 +67,9 @@
 			font-size: 4rem
 			span
 				display: none
-		&__item
+		a
 			position: relative
-			&::before
+			&::after
 				content: ''
 				position: absolute
 				width: 0
@@ -80,11 +80,150 @@
 				right: 0
 				transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
 			&:hover
-				&::before
+				&::after
 					width: 100%
 					right: 0px
-		&__search
-			margin-right: 40px
+		&__search-container
+			position: relative
+			.search
+				position: absolute
+				margin: auto
+				top: 10px
+				right: 0
+				bottom: 0
+				left: 0
+				width: 30px
+				height: 30px
+				background: transparent
+				border-radius: 50%
+				transition: all 1s
+				z-index: 4
+				@include _480
+					color: transparent
+				&:hover
+					cursor: pointer
+				&::before
+					content: ""
+					position: absolute
+					margin: auto
+					top: 4px
+					right: 0
+					bottom: 0
+					left: -44px
+					width: 9px
+					height: 2px
+					background: $colors__text
+					transform: rotate(45deg)
+					transition: all .5s
+					@include _480
+						top: 14px
+						left: -15px
+						width: 20px
+						height: 3px
+				&::after
+					content: ""
+					position: absolute
+					margin: auto
+					top: -11px
+					right: 0
+					bottom: 0
+					left: -60px
+					width: 13px
+					height: 13px
+					border-radius: 50%
+					border: 2px solid $colors__text
+					transition: all .5s
+					@include _480
+						top: -20px
+						left: -46px
+						width: 30px
+						height: 30px
+						border: 3px solid $colors__text
+
+			input
+				position: absolute
+				margin: auto
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				width: 50px
+				height: 50px
+				outline: none
+				border: 1px solid $colors__border
+				color: $colors__text
+				border-radius: 30px
+				padding-left: 20px
+				transition: all 1s
+				opacity: 0
+				z-index: 5
+				font-weight: bolder
+				letter-spacing: 0.1em
+				@include _480
+					left: -30px
+				&:hover
+					cursor: pointer
+				&:focus
+					width: 400px
+					top: 90px
+					left: -300px
+					opacity: 1
+					cursor: text
+					@include _768
+						left: 0
+					@include _480
+						top: 120px
+						left: -100px
+						width: 300px
+						font-size: 3rem
+
+				&:focus ~ .search
+					right: -150px
+					top: 88px
+					background: $colors__primary
+					z-index: 6
+					color: transparent
+					@include _768
+						right: 0px
+						left: -40px
+					@include _480
+						right: 0px
+						left: 0
+						top: 0
+					&::before
+						top: 0
+						left: 0
+						width: 25px
+					&::after
+						top: 0
+						left: 0
+						width: 25px
+						height: 2px
+						border: none
+						background: $colors__text
+						border-radius: 0%
+						transform: rotate(-45deg)
+				&::placeholder
+					color: $colors__text
+					opacity: 0.5
+					font-weight: bolder
+		&__cart
+			a
+				&::before
+					content: "\e93a"
+					font-family: "icomoon"
+					padding-right: 10px
+					display: inline
+				span.count
+					position: absolute
+					top: -10px
+					left: 10px
+					background: #d2cdcd
+					width: 18px
+					height: 18px
+					text-align: center
+					border-radius: 50%
+					line-height: 1.5
 .header-mobile-menu
 	opacity: 0
 	display: flex
@@ -99,9 +238,10 @@
 	text-align: center
 	font-size: 2rem
 	transition: all 0.5s
-	&__link
-		padding: 15px 0
-		text-transform: uppercase
+	li
+		a
+			padding: 15px 0
+			text-transform: uppercase
 	&-socials
 		display: flex
 		flex-flow: row nowrap
@@ -109,6 +249,18 @@
 		align-items: center
 		margin: 10px 0
 		font-size: 4rem
+		li.instagram a
+			&::before
+				content: "\ea92"
+				font-family: "icomoon"
+		li.whatsapp a
+			&::before
+				content: "\ea93"
+				font-family: "icomoon"
+		li.telegram a
+			&::before
+				content: "\ea95"
+				font-family: "icomoon"
 	&.active
 		z-index: 100
 		top: 0
